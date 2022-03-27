@@ -31,7 +31,22 @@ export default {
     '@nuxt/postcss8',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/fontawesome',
   ],
+
+  // Adding fontawesome icons
+
+  fontawesome: {
+    icons: {
+      solid: true,
+      brands: true,
+    },
+  },
+
+  // PurgeCSS module configuration for fontawesome: https://fontawesome.com/v6/docs/web/use-with/vue/use-with#contentHeader
+  purgeCSS: {
+    whitelistPatterns: [/svg.*/, /fa.*/],
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
