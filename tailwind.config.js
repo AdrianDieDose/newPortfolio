@@ -28,6 +28,10 @@ module.exports = {
           100: '#e2e8f0',
         },
       },
+
+      borderRadius: {
+        '10xl': '10rem',
+      },
     },
   },
   variants: {
