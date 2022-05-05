@@ -48,16 +48,31 @@ export default {
     whitelistPatterns: [/svg.*/, /fa.*/],
   },
 
-  // Modules: https://go.nuxtjs.dev/config-modules
+  // Modules: https://go.nuxtjs.dev/config-modules / PWA
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/pwa',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',
+  },
+
+  // Adding PWA
+
+  pwa: {
+    meta: {
+      title: 'My PWA',
+      author: 'Me',
+    },
+    manifest: {
+      name: 'Nuxt.js PWAs are so easy',
+      short_name: 'Nuxt.js PWA',
+      lang: 'en',
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
